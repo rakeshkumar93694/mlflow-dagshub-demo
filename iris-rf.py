@@ -44,7 +44,7 @@ with mlflow.start_run(run_name='rk_kgpian'):
 
     rf.fit(X_train,y_train)
 
-    y_pred = dt.predict(X_test)
+    y_pred = rf.predict(X_test)
 
     accuracy = accuracy_score(y_test, y_pred)
 
